@@ -1,0 +1,243 @@
+@use '../utils/mixins' as *;
+@use '../utils/vars' as *;
+
+.hero {
+  position: relative;
+  border-radius: 0 0 30px 30px;
+  background-color: $color-hero;
+
+  &.section {
+    padding-bottom: 0;
+  }
+
+  @include on-tablet {
+    padding-bottom: 96px;
+  }
+
+  @include on-desktop {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.hero__shell {
+  max-width: 1600px;
+  margin: 0 auto;
+  border-radius: 0 0 30px 30px;
+  background-color: $color-hero;
+
+  @include on-tablet {
+    overflow: hidden;
+  }
+}
+
+.hero__inner {
+  position: static;
+
+  display: grid;
+  gap: 48px;
+
+  width: 100%;
+  padding-top: 74px;
+  padding-bottom: 0;
+
+  @include on-tablet {
+    gap: 56px;
+    min-height: 700px;
+    padding-top: 106px;
+    padding-bottom: 0;
+  }
+
+  @include on-desktop {
+    grid-template-columns: minmax(280px, 362px) minmax(420px, 1fr);
+    gap: 116px;
+    align-items: end;
+
+    min-height: 680px;
+    padding-top: 92px;
+  }
+
+  @include on-wide {
+    padding-top: 96px;
+  }
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  padding: 10px 20px 0;
+
+  @include on-tablet {
+    max-width: 362px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.hero__title {
+  font-size: 3.25rem;
+  line-height: 0.9;
+  color: $color-white;
+
+  @include on-tablet {
+    font-size: 4rem;
+  }
+
+  @include on-desktop {
+    font-size: 4rem;
+    line-height: 0.92;
+  }
+
+  @include on-wide {
+    font-size: 4.25rem;
+  }
+}
+
+.hero__description {
+  max-width: 276px;
+  margin-top: 32px;
+
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: $color-hero-muted;
+
+  @include on-tablet {
+    max-width: 362px;
+  }
+}
+
+.hero__action {
+  width: 100%;
+  min-height: 40px;
+  margin-top: 48px;
+  padding-inline: 0;
+
+  font-size: 0.81rem;
+}
+
+.hero__media {
+  position: relative;
+  z-index: 5;
+  transform: translateY(40px);
+
+  min-height: 240px;
+
+  background-color: transparent;
+
+  @include on-tablet {
+    transform: translateY(0);
+    min-height: 320px;
+  }
+
+  @include on-desktop {
+    overflow: hidden;
+    min-height: 680px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  @include on-wide {
+    min-height: 680px;
+  }
+
+  @include on-tablet {
+    position: absolute;
+    top: 120px;
+    right: 0;
+
+    max-width: 502px;
+    max-height: 680px;
+  }
+
+  @include on-desktop {
+    max-width: 687px;
+  }
+
+  @include on-wide {
+    max-width: 1135px;
+  }
+
+  picture {
+    display: block;
+
+    @include on-wide {
+      height: 680px;
+    }
+  }
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__controls {
+  position: absolute;
+  inset: auto 20px 24px;
+
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 16px;
+  align-items: center;
+
+  @include on-tablet {
+    inset: auto 32px 26px;
+    gap: 16px;
+  }
+
+  @include on-desktop {
+    inset: auto 38px 32px;
+  }
+}
+
+.hero__control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  color: $color-primary;
+
+  background-color: $color-white;
+
+  transition:
+    transform $transition-medium,
+    background-color $transition-medium,
+    color $transition-medium;
+
+  &:hover {
+    transform: scale(1.05);
+    color: $color-white;
+    background-color: $color-primary;
+  }
+}
+
+.hero__control-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.hero__meta {
+  min-width: 0;
+}
+
+.hero__meta-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: $color-white;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+}
+
+.hero__meta-copy {
+  max-width: 220px;
+  margin-top: 6px;
+
+  font-size: 0.81rem;
+  line-height: 1.35;
+  color: $color-hero-muted;
+}

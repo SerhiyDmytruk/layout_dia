@@ -111,14 +111,13 @@
   justify-content: center;
 
   min-height: 50px;
-  padding: 14px 30px;
-  border-radius: 10px;
+  padding: 13px 32px;
+  border-radius: 8px;
 
   font-family: $font-display;
-  font-size: 0.81rem;
+  font-size: 0.94rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+  line-height: 1.4;
 
   transition:
     background-color $transition-medium,
@@ -143,5 +142,4 @@
 
 .button--pill {
   padding-inline: 40px;
-  border-radius: 999px;
 }

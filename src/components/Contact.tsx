@@ -63,7 +63,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="button button--primary"
+              className="button button--primary contact__submit"
             >
               Send
             </button>
@@ -87,7 +87,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="contact__link contact__link--address"
               >
-                2905 West Drive, Buffalo Grove, IL 60089
+                2905 West Drive, Buffalo Grove
               </a>
             </div>
             <div className="contact__info-item">

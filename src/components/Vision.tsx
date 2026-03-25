@@ -18,7 +18,7 @@ const Vision = () => (
       </p>
       <a
         href="#contact"
-        className="button button--primary button--pill"
+        className="button button--primary vision__button"
       >
         Apply
       </a>

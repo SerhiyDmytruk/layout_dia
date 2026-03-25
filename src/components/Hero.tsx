@@ -6,7 +6,7 @@ import heroTabletImg from '@/assets/hero/banner-640.png';
 import heroWideImg from '@/assets/hero/banner-full-width.png';
 
 const Hero = () => (
-  <section className="hero" id="top">
+  <section className="section hero" id="top">
     <div className="hero__shell">
       <div className="container container--wide hero__inner">
         <div className="hero__content">
@@ -19,10 +19,7 @@ const Hero = () => (
             We believe in the power of bold ideas that can solve business
             challenges.
           </p>
-          <a
-            href="#expertise"
-            className="button button--primary hero__action"
-          >
+          <a href="#expertise" className="button button--primary hero__action">
             Learn more
           </a>
         </div>
@@ -39,7 +36,6 @@ const Hero = () => (
               className="hero__image"
               width={720}
               height={680}
-              fetchPriority="high"
             />
           </picture>
           <div className="hero__controls">

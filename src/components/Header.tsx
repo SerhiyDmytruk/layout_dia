@@ -31,13 +31,8 @@ const Header = () => {
               {l.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            className="site-header__cta"
-          >
-            Hire us
-          </a>
         </nav>
+
 
         <button
           type="button"
@@ -49,8 +44,15 @@ const Header = () => {
         >
           <span className="site-header__menu-line" />
           <span className="site-header__menu-line" />
-          <span className="site-header__menu-line" />
         </button>
+
+        <a
+          href="#contact"
+          className="site-header__cta"
+        >
+          Hire us
+        </a>
+
       </div>
 
       {open && (
@@ -69,13 +71,6 @@ const Header = () => {
               {l.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            onClick={() => setOpen(false)}
-            className="site-header__mobile-cta"
-          >
-            Hire us
-          </a>
         </nav>
       )}
     </header>

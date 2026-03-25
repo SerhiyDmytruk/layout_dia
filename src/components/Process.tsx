@@ -2,24 +2,40 @@ import { ArrowRight } from 'lucide-react';
 
 const processCards = [
   {
-    num: '01',
-    title: 'Creative direction',
-    items: ['Brand development', 'Copywriting', 'Art direction'],
+    num: '001',
+    items: [
+      'Brand Development',
+      'Copywriting',
+      'Logo & Webite',
+      'Design Packaging',
+    ],
   },
   {
-    num: '02',
-    title: 'Visual development',
-    items: ['Logo design', 'Packaging', 'Motion design'],
+    num: '002',
+    items: [
+      'Сontent Production',
+      'Graphic Design',
+      'Video Production ',
+      'Post Production',
+    ],
   },
   {
-    num: '03',
-    title: 'Digital communications',
-    items: ['Website design', 'Email marketing', 'Social campaigns'],
+    num: '003',
+    items: [
+      'Marketing Strategy',
+      'Email Marketing',
+      'Paid Advertising',
+      'Blog Content & SEO',
+    ],
   },
   {
-    num: '04',
-    title: 'Marketing strategy',
-    items: ['SEO content', 'Paid media', 'Strategic partnerships'],
+    num: '004',
+    items: [
+      'Digital Communications',
+      'Influencer Marketing',
+      'Product Placements',
+      'Strategic Partnerships',
+    ],
   },
 ];
 
@@ -32,29 +48,26 @@ const Process = () => (
           Air is a full service creative agency
         </h2>
         <p className="process__copy">
-          Every project is born of a strategy and craft to become a living, breathing part of our clients&apos; businesses.
+          Deep analytics, strong strategy and bright creative ideas.
         </p>
         <p className="process__copy">
-          We are proud of the portfolio of work we have created only with our biggest partners and clients.
+          We are sure that first-rate job is possible only if all three
+          components are united.
         </p>
       </div>
       <div className="process__cards">
         {processCards.map((card, index) => (
           <article
             key={card.num}
-            className={`service-card ${index % 2 === 1 ? 'service-card--raised' : ''}`}
+            className={`service-card ${index % 2 === 0 ? 'service-card--lower' : ''}`}
           >
             <span className="service-card__index">{card.num}</span>
-            <h3 className="service-card__title">{card.title}</h3>
             <ul className="service-card__list">
               {card.items.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <a
-              href="#contact"
-              className="service-card__link"
-            >
+            <a href="#contact" className="service-card__link">
               <span className="service-card__link-icon">
                 <ArrowRight className="service-card__icon" />
               </span>
