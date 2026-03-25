@@ -1,5 +1,5 @@
 const WhoWeAre = () => (
-  <section id="who-we-are" className="section section--light who-we-are">
+  <section id="who-we-are" className="section section--surface who-we-are">
     <div className="container container--narrow section__content section__content--centered">
       <h2 className="section-title">
         Who we are

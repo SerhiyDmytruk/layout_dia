@@ -1,7 +1,7 @@
-import shapesImg from "@/assets/shapes.png";
+import shapesImg from '@/assets/decor/shapes.png';
 
 const Vision = () => (
-  <section className="section section--light vision">
+  <section className="section section--light vision" id="vision">
     <img
       src={shapesImg}
       alt=""
@@ -13,7 +13,8 @@ const Vision = () => (
         Vision, Passion, Results
       </h2>
       <p className="section-copy vision__copy">
-        We are sure that first-rate job is possible only if all three components are united.
+        We are sure that first-rate job is possible only if all three
+        components are united.
       </p>
       <a
         href="#contact"

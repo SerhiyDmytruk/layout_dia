@@ -1,17 +1,18 @@
 const footerLinks = [
-  { label: 'About Us', href: '#who-we-are' },
   { label: 'Home', href: '#' },
-  { label: 'Work', href: '#expertise' },
-  { label: 'Services', href: '#expertise' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'About us', href: '#who-we-are' },
+  { label: 'Services', href: '#process' },
+  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Contact us', href: '#contact' },
 ];
 
 const Footer = () => (
   <footer className="site-footer">
     <div className="container site-footer__inner">
       <a
-        href="#top"
+        href="#"
         className="site-footer__brand"
+        aria-label="Air home"
       >
         Air
       </a>

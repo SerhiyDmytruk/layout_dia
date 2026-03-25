@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const navLinks = [
   { label: 'About us', href: '#who-we-are' },
-  { label: 'Services', href: '#expertise' },
+  { label: 'Services', href: '#process' },
   { label: 'Testimonials', href: '#testimonials' },
   { label: 'Contact us', href: '#contact' },
 ];
@@ -14,8 +14,9 @@ const Header = () => {
     <header className="site-header">
       <div className="container container--wide site-header__inner">
         <a
-          href="#top"
+          href="#"
           className="site-header__brand"
+          aria-label="Air home"
         >
           Air
         </a>

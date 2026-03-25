@@ -17,8 +17,10 @@ const Index = () => (
     <Process />
     <Testimonials />
     <Vision />
-    <Contact />
-    <Footer />
+    <div className="footer-shell">
+      <Contact />
+      <Footer />
+    </div>
   </main>
 );
 

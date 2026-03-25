@@ -1,6 +1,6 @@
-import brandingImg from '@/assets/expertise-branding.jpg';
-import communicationImg from '@/assets/expertise-communication.jpg';
-import strategyImg from '@/assets/expertise-strategy.jpg';
+import brandingImg from '@/assets/expertise/expertise-1.png';
+import communicationImg from '@/assets/expertise/expertise-2.png';
+import strategyImg from '@/assets/expertise/expertise-3.png';
 
 const cards = [
   {
@@ -26,15 +26,10 @@ const cards = [
 const Expertise = () => (
   <section id="expertise" className="section section--surface expertise">
     <div className="container">
-      <h2 className="section-title section-title--centered">
-        Our expertise
-      </h2>
+      <h2 className="section-title section-title--centered">Our expertise</h2>
       <div className="expertise__grid">
         {cards.map((card) => (
-          <div
-            key={card.title}
-            className="expertise-card"
-          >
+          <article key={card.title} className="expertise-card">
             <div className="expertise-card__media">
               <img
                 src={card.image}
@@ -45,13 +40,9 @@ const Expertise = () => (
                 height={512}
               />
             </div>
-            <h3 className="expertise-card__title">
-              {card.title}
-            </h3>
-            <p className="expertise-card__description">
-              {card.description}
-            </p>
-          </div>
+            <h3 className="expertise-card__title">{card.title}</h3>
+            <p className="expertise-card__description">{card.description}</p>
+          </article>
         ))}
       </div>
     </div>

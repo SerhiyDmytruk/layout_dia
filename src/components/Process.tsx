@@ -1,18 +1,34 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
 
 const processCards = [
-  { num: "01", title: "Creative Direction", items: ["Ede & Mobile Design", "Typography", "Art Direction"] },
-  { num: "02", title: "Visual Development", items: ["Copywriting", "Logo & Mobile Design", "Packaging"] },
-  { num: "03", title: "Digital Communications", items: ["Digital Marketing", "Motion & Animation", "Strategic Partnerships"] },
-  { num: "04", title: "Marketing Strategy", items: ["Email Marketing", "Paid Advertising", "Blog Content & SEO"] },
+  {
+    num: '01',
+    title: 'Creative direction',
+    items: ['Brand development', 'Copywriting', 'Art direction'],
+  },
+  {
+    num: '02',
+    title: 'Visual development',
+    items: ['Logo design', 'Packaging', 'Motion design'],
+  },
+  {
+    num: '03',
+    title: 'Digital communications',
+    items: ['Website design', 'Email marketing', 'Social campaigns'],
+  },
+  {
+    num: '04',
+    title: 'Marketing strategy',
+    items: ['SEO content', 'Paid media', 'Strategic partnerships'],
+  },
 ];
 
 const Process = () => (
-  <section className="process">
-    <div className="process__intro">
-      <div className="container process__intro-content">
-        <p className="eyebrow eyebrow--light">Services</p>
-        <h2 className="process__title">
+  <section id="process" className="section section--surface process">
+    <div className="container process__layout">
+      <div className="process__content">
+        <p className="eyebrow">Services</p>
+        <h2 className="section-title process__title">
           Air is a full service creative agency
         </h2>
         <p className="process__copy">
@@ -22,14 +38,11 @@ const Process = () => (
           We are proud of the portfolio of work we have created only with our biggest partners and clients.
         </p>
       </div>
-    </div>
-
-    <div className="container process__cards-wrap">
       <div className="process__cards">
-        {processCards.map((card) => (
-          <div
+        {processCards.map((card, index) => (
+          <article
             key={card.num}
-            className="service-card"
+            className={`service-card ${index % 2 === 1 ? 'service-card--raised' : ''}`}
           >
             <span className="service-card__index">{card.num}</span>
             <h3 className="service-card__title">{card.title}</h3>
@@ -45,9 +58,9 @@ const Process = () => (
               <span className="service-card__link-icon">
                 <ArrowRight className="service-card__icon" />
               </span>
-              Learn more
+              <span className="service-card__link-copy">Learn more</span>
             </a>
-          </div>
+          </article>
         ))}
       </div>
     </div>

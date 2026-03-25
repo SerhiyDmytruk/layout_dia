@@ -1,14 +1,23 @@
-import { useState, type FormEvent } from "react";
-import { Facebook, Twitter } from "lucide-react";
+import { useState, type FormEvent } from 'react';
+import { Facebook, Instagram, Twitter } from 'lucide-react';
 
 const Contact = () => {
-  const [form, setForm] = useState({ email: "", name: "", message: "" });
+  const [form, setForm] = useState({ email: '', name: '', message: '' });
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    if (!form.email || !form.name || !form.message) return;
-    setForm({ email: "", name: "", message: "" });
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const trimmedForm = {
+      email: form.email.trim(),
+      name: form.name.trim(),
+      message: form.message.trim(),
+    };
+
+    if (!trimmedForm.email || !trimmedForm.name || !trimmedForm.message) {
+      return;
+    }
+
+    setForm({ email: '', name: '', message: '' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -20,7 +29,9 @@ const Contact = () => {
             <div>
               <input
                 type="email"
-                placeholder="Email"
+                name="email"
+                autoComplete="email"
+                placeholder="Your email"
                 required
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -30,6 +41,8 @@ const Contact = () => {
             <div>
               <input
                 type="text"
+                name="name"
+                autoComplete="name"
                 placeholder="Your name"
                 required
                 value={form.name}
@@ -39,6 +52,7 @@ const Contact = () => {
             </div>
             <div>
               <textarea
+                name="message"
                 placeholder="Your message"
                 required
                 rows={4}
@@ -61,7 +75,9 @@ const Contact = () => {
           <div className="contact__info-list">
             <div className="contact__info-item">
               <p className="eyebrow eyebrow--light">Call us</p>
-              <a href="tel:654321987" className="contact__link">654 321 987</a>
+              <a href="tel:654321987" className="contact__link">
+                654 321 987
+              </a>
             </div>
             <div className="contact__info-item">
               <p className="eyebrow eyebrow--light">Visit us</p>
@@ -71,17 +87,38 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="contact__link contact__link--address"
               >
-                2905 West Drive, Buffalo Grove
+                2905 West Drive, Buffalo Grove, IL 60089
               </a>
             </div>
             <div className="contact__info-item">
               <p className="eyebrow eyebrow--light">Our socials</p>
               <div className="contact__socials">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="contact__social-link" aria-label="Facebook">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact__social-link"
+                  aria-label="Facebook"
+                >
                   <Facebook className="contact__social-icon" />
                 </a>
-                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="contact__social-link" aria-label="Twitter">
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact__social-link"
+                  aria-label="Twitter"
+                >
                   <Twitter className="contact__social-icon" />
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact__social-link"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="contact__social-icon" />
                 </a>
               </div>
             </div>
