@@ -55,11 +55,12 @@
 
     min-height: 680px;
     padding-top: 92px;
-    width: min(100% - 40px, 1600px);
+    width: min(calc(100% - 108px), 1600px);
     margin: 0 auto;
   }
 
   @include on-wide {
+    width: min(100% - 40px, 1600px);
     padding-top: 96px;
   }
 }
