@@ -112,21 +112,24 @@
 .site-header__menu-button {
   display: inline-flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
   align-items: center;
   justify-content: center;
-  margin-right: auto;
 
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-right: auto;
+  padding: 0;
+  border-radius: 0;
 
   color: $color-white;
 
-  transition: background-color $transition-medium;
+  transition:
+    color $transition-medium,
+    opacity $transition-medium;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.08);
+    opacity: 0.72;
   }
 
   @include on-desktop {
@@ -135,7 +138,7 @@
 }
 
 .site-header__menu-line {
-  width: 18px;
+  width: 14px;
   height: 2px;
   background-color: currentColor;
   transition:
@@ -145,15 +148,11 @@
 
 .site-header__menu-button--open {
   .site-header__menu-line:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(3px) rotate(45deg);
   }
 
   .site-header__menu-line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .site-header__menu-line:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-3px) rotate(-45deg);
   }
 }
 
