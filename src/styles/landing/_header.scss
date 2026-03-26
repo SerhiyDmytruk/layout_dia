@@ -32,8 +32,7 @@
 }
 
 .site-header__brand {
-
-  @include on-tablet {
+  @include on-desktop {
     margin-right: auto;
   }
 }
@@ -53,7 +52,6 @@
 
   &:hover {
     transform: translateY(-1px);
-    opacity: 0.82;
   }
 }
 
@@ -89,12 +87,11 @@
   color: $color-hero-muted;
 
   &:hover {
-    color: $color-white;
+    color: rgba(255, 255, 255, 0.72);
   }
 }
 
 .site-header__cta {
-
   @include on-desktop {
     display: inline-flex;
     margin-left: auto;

@@ -120,11 +120,7 @@
 
   width: 32px;
   height: 32px;
-  border-radius: 50%;
-
   color: $color-hero-muted;
-
-  background-color: rgba(255, 255, 255, 0.02);
 
   transition:
     color $transition-medium,
@@ -132,13 +128,15 @@
     transform $transition-medium;
 
   &:hover {
-    transform: translateY(-2px);
-    color: $color-white;
-    background-color: rgba(255, 255, 255, 0.08);
+    color: $color-primary;
   }
 }
 
 .contact__social-icon {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 21px;
+
+  &:hover {
+    color: $color-primary;
+  }
 }

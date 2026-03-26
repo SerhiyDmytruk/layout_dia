@@ -38,13 +38,13 @@
   gap: 48px;
 
   width: 100%;
-  padding-top: 74px;
+  padding-top: 0;
   padding-bottom: 0;
+  margin: 0;
 
   @include on-tablet {
     gap: 56px;
     min-height: 700px;
-    padding-top: 106px;
     padding-bottom: 0;
   }
 
@@ -55,6 +55,8 @@
 
     min-height: 680px;
     padding-top: 92px;
+    width: min(100% - 40px, 1600px);
+    margin: 0 auto;
   }
 
   @include on-wide {
@@ -70,8 +72,12 @@
 
   @include on-tablet {
     max-width: 362px;
+  }
+
+  @include on-desktop {
     padding-right: 0;
     padding-left: 0;
+
   }
 }
 
@@ -140,17 +146,15 @@
     min-height: 680px;
   }
 
-  @include on-tablet {
+  @include on-desktop {
     position: absolute;
     top: 120px;
     right: 0;
 
     max-width: 502px;
     max-height: 680px;
-  }
 
-  @include on-desktop {
-    max-width: 687px;
+    // max-width: 687px;
   }
 
   @include on-wide {

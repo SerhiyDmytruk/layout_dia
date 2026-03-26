@@ -17,7 +17,6 @@ const Contact = () => {
     }
 
     setForm({ email: '', name: '', message: '' });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
